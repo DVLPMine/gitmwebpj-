@@ -4,10 +4,164 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>네이버 레이아웃 따라하기</title>
+    <style>
+      
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: #888;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      header {
+        margin: auto;
+        width: 1000px;
+        display: flex;
+        height: 215px;
+        align-items: center;
+        position: relative;
+      }
+      fieldset {
+        border: none;
+      }
+      .visually-hidden {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      }
+      .links {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .link_text {
+        font-size: 10px;
+        margin-left: 5px;
+      }
+      .img_logo {
+        margin-bottom: 12px;
+        width: 220px;
+        height: 80px;
+      }
+      .search_box {
+        width: 520px;
+        height: 50px;
+        border: 2px solid #03cf5d;
+        display: flex;
+        align-items: center;
+      }
+      .search_box input {
+        flex: 9;
+        height: 46px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+      }
+      .search_box button {
+        flex: 1;
+        height: 46px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        background-color: #03cf5d;
+      }
+      /* nav */
+      header>nav {
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        bottom: 0;
+      }
+      .nav_items {
+        width: 100%;
+        height: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-weight: bold;
+        border-top: 1px solid;
+      }
+      .nav_items ul > li {
+        display: inline-block;
+        margin-left: 8px;
+      }
+      .nav_items ul > li:nth-child(-n + 7) > a {
+        color: #03cf5d;
+      }
+      .nav_items ul > li > a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      main {
+        background-color: #f2f4f7;
+      }
+      footer {
+        background-color: darkgray;
+        height: 310px;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    <header>상단</header>
+    <header>
+      <div class="links">
+        <a href = "/" class="link_text">네이버를 시작페이지로</a>
+        <a href="/" class="link_text">쥬니어네이버</a>
+        <a href="/" class="link_text">해피빈</a>
+      </div>
+      <a href="/"><img src="https://blog.kakaocdn.net/dn/Xg6tN/btspTJNb825/W3cl6ovKYmekh23TKfc5L0/img.jpg" class="img_logo"/></a>
+      <form>
+        <fieldset>
+          <legend class="visually-hidden">검색</legend>
+          <div class="search_box">
+            <input type="text" maxlength="225" tabindex="1"/>
+            <button type="submit" tabindex="2">검색</button>
+          </div>
+        </fieldset>
+      </form>
+      <nav>
+        <div class="nav_items">
+          <ul>
+            <li><a href="/"></a>메일</li>
+            <li><a href="/"></a>카페</li>
+            <li><a href="/"></a>블로그</li>
+            <li><a href="/"></a>지식iN</li>
+            <li><a href="/"></a>쇼핑</li>
+            <li><a href="/"></a>Pay</li>
+            <li><a href="/"></a>TV</li>
+            <li><a href="/"></a>사전</li>
+            <li><a href="/"></a>뉴스</li>
+            <li><a href="/"></a>증권</li>
+            <li><a href="/"></a>부동산</li>
+            <li><a href="/"></a>지도</li>
+            <li><a href="/"></a>영화</li>
+            <li><a href="/"></a>뮤직</li>
+            <li><a href="/"></a>책</li>
+            <li><a href="/"></a>웹툰</li>
+            <li><a href="/"></a>더보기</li>
+          </ul>
+          <div class="keyword">
+            <span class="color_naver">1</span>
+            <span>Eoldam spark</span>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>메인</main>
     <footer>하단</footer>
   </body>
